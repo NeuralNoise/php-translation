@@ -1,0 +1,6 @@
+{
+    "hello": "Hello",
+    "user.name": "User name",
+    "hello.user": "Hello, {0}",
+    "files.summary": "The disk {1} contains {0} file(s)."
+}
