@@ -17,14 +17,14 @@ class NegotiationTest extends \PHPUnit_Framework_TestCase
         $language = Negotiation::negotiate($availableLanguages);
         $this->assertSame('ja', $language);
 
-        // set query string.
-        $_GET['language'] = 'ko';
-        $language = Negotiation::negotiate($availableLanguages);
-        $this->assertSame('ko', $language);
-
         // set cookie.
         $_COOKIE['language'] = 'zh';
         $language = Negotiation::negotiate($availableLanguages);
         $this->assertSame('zh', $language);
+
+        // set query string.
+        $_GET['language'] = 'ko';
+        $language = Negotiation::negotiate($availableLanguages);
+        $this->assertSame('ko', $language);
     }
 } 

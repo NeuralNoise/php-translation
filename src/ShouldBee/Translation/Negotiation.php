@@ -13,8 +13,8 @@ class Negotiation
     {
         $language = $availableLanguages[0];
         $language = self::negotiateByAcceptLanguage($availableLanguages, $language);
-        $language = self::negotiateByQueryString($availableLanguages, $language);
         $language = self::negotiateByCookie($availableLanguages, $language);
+        $language = self::negotiateByQueryString($availableLanguages, $language);
 
         return $language;
     }
