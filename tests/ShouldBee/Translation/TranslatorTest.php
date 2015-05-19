@@ -24,6 +24,7 @@ class TranslatorTest extends \PHPUnit_Framework_TestCase
 
         // set English to current language.
         $translator->setLanguage('en');
+        $this->assertSame($translator->getLanguage(), 'en');
         $message = $translator->translate('user.name');
         $this->assertSame($message, 'User name');
 
@@ -39,6 +40,7 @@ class TranslatorTest extends \PHPUnit_Framework_TestCase
 
         // set Japanese to current language.
         $translator->setLanguage('ja');
+        $this->assertSame($translator->getLanguage(), 'ja');
         $message1 = $translator->translate("user.name");
         $message2 = $translator->translate("files.summary", 12114, "Macintosh HD");
         $this->assertSame($message1, 'ユーザ名');
